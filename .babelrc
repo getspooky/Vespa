@@ -9,5 +9,17 @@
       }
     ],
     "@babel/preset-react"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@app"      : "./app/",
+        "@config"   : "./config",
+        "@internals": "./internals",
+        "@packages" : "./packages",
+        "@binding"  : "./bindings"
+      }
+    }]
   ]
 }
