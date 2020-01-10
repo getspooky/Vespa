@@ -1,0 +1,91 @@
+{
+  "name": "vespa",
+  "version": "1.0.0",
+  "description": "Beautifully designed administration panel for (Nodejs, Laravel, Java Spring, Ruby On Rails , Django , Asp.net Core ...)",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "mock-api": "json-server --watch internals/mocks/api.json",
+    "test": "jest",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getspooky/Vespa.git"
+  },
+  "author": "Yasser Ameur El Idrissi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getspooky/Vespa/issues"
+  },
+  "homepage": "https://github.com/getspooky/Vespa#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "dotenv-webpack": "^1.7.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-equimper": "*",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.17.0",
+    "file-loader": "^4.2.0",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "i18next": "^17.2.0",
+    "i18next-browser-languagedetector": "^4.0.0",
+    "jest-transform-stub": "^2.0.0",
+    "jquery": "^3.4.1",
+    "json-server": "^0.15.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "popper.js": "^1.16.0",
+    "prop-types": "^15.7.2",
+    "react-dev-utils": "^9.1.0",
+    "react-i18next": "^9.0.10",
+    "redux-mock-store": "^1.5.3",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "styled-components": "^4.4.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bulma": "^0.8.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-google-recaptcha-v3": "^1.4.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.2.0",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "uid": "^0.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
