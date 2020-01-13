@@ -1,0 +1,49 @@
+.table {
+  color: inherit;
+
+  thead {
+    th {
+      background: transparent;
+      border-width: 0px;
+      @media print {
+        background: transparent;
+      }
+    }
+  }
+
+  th {
+    color: $text-muted !important;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+.table-nowrap {
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+
+.table-md {
+  th,
+  td {
+    padding: .5rem;
+  }
+}
+
+.table-vcenter {
+  td,
+  th {
+    vertical-align: middle;
+  }
+}
+
+.table-center {
+  td,
+  th {
+    text-align: center;
+  }
+}
