@@ -1,0 +1,21 @@
+{
+  "NavBar.dropdown-menu.profile" : "Profile",
+  "NavBar.dropdown-menu.help_circle" : "Need help?",
+  "NavBar.dropdown-menu.log_out" : "Sign out",
+  "TopNav.item->0" : "Dashboard",
+  "TopNav.item->1" : "Users",
+  "TopNav.item->2" : "Posts",
+  "TopNav.item->3" : "Notifications",
+  "TopNav.item->4" : "Shopping",
+  "TopNav.item->5" : "Payment",
+  "TopNav.item->6" : "Settings",
+  "TopNav.search"  : "Search",
+  "Dashboard.page.title" : "Dashboard",
+  "Dashboard.page.state.item->0" : "Total Users",
+  "Dashboard.page.state.item->1" : "Total Posts",
+  "Dashboard.page.state.item->2" : "Daily Sales",
+  "Dashboard.page.state.item->3" : "Followers",
+  "Dashboard.page.state.item->4" : "Earnings",
+  "Dashboard.page.state.item->5" : "Products",
+  "Dashboard.page.state.browsers": "Browser Stats"
+}
