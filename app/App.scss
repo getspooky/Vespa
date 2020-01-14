@@ -1,0 +1,37 @@
+/*!
+ * Tabler (v0.9.0)
+ * Copyright 2018-2019 The Tabler Authors
+ * Copyright 2018-2019 codecalm
+ * Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+ */
+
+@import "~font-awesome/css/font-awesome.min.css";
+
+@import "../scss/config";
+@import "../scss/bootstrap-config";
+@import "../scss/mixins-override";
+@import "../scss/bootstrap-components";
+@import "../scss/helper";
+
+@import "../scss/fonts/webfonts";
+
+@import "../scss/layout/core";
+@import "../scss/layout/layout";
+@import "../scss/layout/navbar";
+@import "../scss/layout/sidenav";
+@import "../scss/layout/page";
+
+@import "../scss/utils/border";
+@import "../scss/utils/background";
+@import "../scss/utils/colors";
+@import "../scss/utils/sizing";
+@import "../scss/utils/opacity";
+@import "../scss/utils/shadow";
+
+@import "../scss/ui/avatars";
+@import "../scss/ui/nav";
+@import "../scss/ui/dropdowns";
+@import "../scss/ui/icons";
+@import "../scss/ui/tables";
+
+@import "../scss/rtl";
