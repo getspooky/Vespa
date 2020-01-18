@@ -10,7 +10,8 @@
 import WelcomePage from '../containers/WelcomePage'
 import LoginPage from '../containers/LoginPage';
 import RegisterPage from '../containers/RegisterPage';
-import ForgotPasswordPage from '../containers/ForgotPasswordPage';
+import ResetPasswordPage from '../containers/ResetPasswordPage';
+import ForgotPassword from '../containers/ForgotPasswordPage';
 import DashboardPage from '../containers/DashboardPage';
 import UsersPage from '../containers/UsersPage';
 import PostsPage from '../containers/PostsPage';
@@ -25,8 +26,10 @@ export default [
   { id:'#login', path: '/login', component: LoginPage },
   // Register Page
   { id:'#register', path: '/register', component: RegisterPage },
+  // Reset Password
+  { id:'#reset', path: '/reset/password/:token', component: ResetPasswordPage},
   // Forgot Password
-  { id:'#forgot', path: '/forgot/password', component: ForgotPasswordPage},
+  { id:'#forgot', path: '/forgot/password/', component: ForgotPassword},
   // Dashboard Page
   { id:'#dashboard', path:'/dashboard', component: DashboardPage },
   // Users
