@@ -30,7 +30,7 @@ export function AUTH_REDUCER(state = initState, {type, payload}) {
   switch (type) {
     case AUTH_REGISTER:
       state = {
-        Auth: {isAuthenticated: true, token: payload.response.data},
+        Auth: {isAuthenticated: true, token: payload.data},
       };
       break;
   }
