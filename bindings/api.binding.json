@@ -1,4 +1,5 @@
 {
   "[POST]_REGISTER_API_BINDING" : "",
   "[POST]_LOGIN_API_BINDING"    : "",
+  "[POST]_RESET_PASSWORD_API_BINDING" : ""
 }
