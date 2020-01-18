@@ -7,19 +7,22 @@
  * file that was distributed with this source code.
  */
 
+import axios from 'axios';
+
 /**
  * Parses the JSON returned by a network request
  *
  * @function
  * @name parseJSON
- * @param  {object} response A response from a network request
+ * @param  {number} HTTP response status codes
+ * @param  {object} A response from a network request
  * @return {object}  The parsed JSON from the request
  */
-function parseJSON(response) {
-  if (response.status === 204 || response.status === 205) {
+function parseJSON({status,data}) {
+  if (status === 204 || status === 205) {
     return null;
   }
-  return response.json();
+  return data.response;
 }
 
 /**
@@ -51,7 +54,10 @@ function checkStatus(response) {
  * @returns {object} The response data
  */
 export default function request(url, options) {
-  return fetch(url, options)
+  return axios({
+    url,
+    ...options,
+  })
     .then(checkStatus)
     .then(parseJSON);
 }
