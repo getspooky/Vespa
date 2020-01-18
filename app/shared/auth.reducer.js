@@ -8,6 +8,7 @@
  */
 
 import {AUTH_REGISTER} from 'app/containers/RegisterPage/constants';
+import {AUTH_LOGIN} from '../containers/LoginPage/constants';
 
 const initState = {
   Auth: {
@@ -28,6 +29,7 @@ const initState = {
  */
 export function AUTH_REDUCER(state = initState, {type, payload}) {
   switch (type) {
+    case AUTH_LOGIN :
     case AUTH_REGISTER:
       state = {
         Auth: {isAuthenticated: true, token: payload.data},
