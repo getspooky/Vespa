@@ -8,6 +8,7 @@
  */
 
 import axios from 'axios';
+import AlertDialog from 'sweetalert2';
 
 /**
  * Parses the JSON returned by a network request
@@ -26,21 +27,20 @@ function parseJSON({status,data}) {
 }
 
 /**
- * Checks if a network request came back fine, and throws an error if not
+ * Show alert message.
  *
  * @function
- * @name checkStatus
- * @param  {object} response   A response from a network request
- * @returns {object|undefined} Returns either the response, or throws an error
+ * @name showError
+ * @param  {object} error A error response from a network request
+ * @returns {function} AlertDialog
  */
-function checkStatus(response) {
-  if (response.status >= 200 && response.status < 300) {
-    return response;
-  }
-
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
+function showError({response}) {
+  const {statusText,data} = response;
+  AlertDialog.fire({
+    icon: 'error',
+    title: statusText,
+    text: data !== undefined && data.errors.length !== 0 ? data.errors.message : 'Something went wrong!'
+  });
 }
 
 /**
@@ -58,6 +58,6 @@ export default function request(url, options) {
     url,
     ...options,
   })
-    .then(checkStatus)
-    .then(parseJSON);
+    .then(parseJSON)
+    .catch(showError)
 }
