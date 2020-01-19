@@ -8,20 +8,25 @@
  */
 
 import React from 'react';
+import {withNamespaces} from 'react-i18next';
 import './index.scss';
 
-export default function() {
+const NotFoundPage = function({t:lang}) {
   return (
     <div className="content" style={{"marginTop":"25vh"}}>
       <div className="text-center">
         <div className="display-1 text-muted mb-5">
-          <i className="si si-exclamation" /> 404
+          <i className="si si-exclamation" /> {lang('NotFoundPage.status')}
         </div>
-        <h1 className="h2 mb-3">Oops.. You just found an error page..</h1>
+        <h1 className="h2 mb-3">{lang('NotFoundPage.title')}</h1>
         <p className="h4 text-muted font-weight-normal mb-7">
-          We are sorry but our service is currently not available…
+          {lang('NotFoundPage.message')}
         </p>
       </div>
     </div>
   );
-}
+};
+
+export default withNamespaces()(NotFoundPage);
+
+

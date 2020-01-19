@@ -16,5 +16,8 @@
   "ResetPassword.header.title": "Reset Password",
   "ResetPassword.input.old_password": "Old Password",
   "ResetPassword.input.new_password": "New Password",
-  "ResetPassword.button.submit": "Reset"
+  "ResetPassword.button.submit": "Reset",
+  "NotFoundPage.status": 404,
+  "NotFoundPage.title": "Oops.. You just found an error page..",
+  "NotFoundPage.message": " We are sorry but our service is currently not available…"
 }
