@@ -11,6 +11,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {AuthWrapper} from 'app/components/AuthWrapper/index';
+import {withNamespaces} from 'react-i18next';
 import { LOGIN_ACTION } from './action';
 import SimpleReactValidator from 'simple-react-validator';
 import './index.scss';
@@ -85,17 +86,18 @@ class Login extends Component {
   }
 
   render() {
+    const {t:lang} = this.props;
     return (
-      <AuthWrapper title="Login" links={[
-        { href: '/register' , label: 'Sign Up'},
-        { href: '/forgot/password', label: ' Forgot Password'},
-        { href: '/', label: 'Need Help?'}
+      <AuthWrapper title={lang('Login.header.title')} links={[
+        { href: '/register' , label: lang('Auth.form.footer.sign_up.label')},
+        { href: '/forgot/password', label: lang('Auth.form.footer.forgot_password.label')},
+        { href: '/', label: lang('Auth.form.footer.need_help.label')}
       ]}>
         <form>
           {this.validator.message('email', this.state.email, 'required|email')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="email" name="email" placeholder="Email" onChange={this.HandleInputChange} />
+              <input className="input is-large" type="email" name="email" placeholder={lang('Auth.input.email')} onChange={this.HandleInputChange} value={this.state.email} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-envelope" />
               </span>
@@ -104,7 +106,7 @@ class Login extends Component {
           {this.validator.message('password', this.state.password, 'required|min:08|max:120')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="password" name="password" placeholder="Password" onChange={this.HandleInputChange} />
+              <input className="input is-large" type="password" name="password" placeholder={lang('Auth.input.password')} onChange={this.HandleInputChange} value={this.state.password} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-lock" />
               </span>
@@ -112,7 +114,7 @@ class Login extends Component {
           </div>
 
           <button type="button" className="button is-block is-info is-large is-fullwidth" onClick={this.HandleSubmit}>
-            Login
+            {lang('Login.button.submit')}
             <i className="fa fa-sign-in" aria-hidden="true" />
           </button>
         </form>
@@ -130,4 +132,4 @@ Login.propTypes = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(withNamespaces()(Login));
