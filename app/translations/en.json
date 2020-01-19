@@ -9,5 +9,8 @@
   "Login.header.title": "Login",
   "Login.button.submit": "Login",
   "Register.header.title": "Sign Up",
-  "Register.button.submit": "Sign Up"
+  "Register.button.submit": "Sign Up",
+  "Login.header.forgot_password": "Forgot Password",
+  "ForgotPassword.info.message": "Enter your email address and your password will be reset and emailed to you.",
+  "ForgotPassword.button.submit": "Submit"
 }
