@@ -1,0 +1,28 @@
+/*
+ * This file is part of the Vespa package.
+ *
+ * (c) Yasser Ameur El Idrissi <getspookydev@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.page {
+  height: auto !important;
+  min-height: 100vh !important;
+
+  .page-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .page-title {
+    margin-bottom: 20px !important;
+  }
+
+}
+
