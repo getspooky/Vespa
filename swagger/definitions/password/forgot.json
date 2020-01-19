@@ -1,0 +1,25 @@
+{
+  "/password/forgot": {
+    "post": {
+      "tags": [
+        "Authentication"
+      ],
+      "summary": "Forgot Password",
+      "produces": [
+        "application/xml",
+        "application/json"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "email",
+          "type": "string",
+          "format": "email",
+          "required": true
+        }
+      ],
+      "responses": {}
+    }
+  }
+}
+
