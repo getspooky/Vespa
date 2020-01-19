@@ -8,9 +8,9 @@
  */
 
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {AuthWrapper} from 'app/components/AuthWrapper';
 import {HTTP_REQUEST_FORGOT_PASSWORD} from './service';
+import {withNamespaces} from 'react-i18next';
 import SimpleReactValidator from 'simple-react-validator';
 import './index.scss';
 
@@ -66,27 +66,28 @@ class ForgotPassword extends Component {
   }
 
   render() {
+    const {t:lang} = this.props;
     return (
-      <AuthWrapper title="Reset Password" links={[
-        { href: '/register' , label: 'Sign Up'},
-        { href: '/login', label: 'Sign In'},
-        { href: '/', label: 'Need Help?'}
+      <AuthWrapper title={lang('Login.header.forgot_password')} links={[
+        { href: '/register' , label: lang('Auth.form.footer.sign_up.label')},
+        { href: '/login', label: lang('Auth.form.footer.sign_in.label')},
+        { href: '/', label: lang('Auth.form.footer.need_help.label')}
       ]}>
-        <div className="alert alert-success">
-          Enter your email address and your password will be reset and emailed to you.
+        <div className="alert alert-info">
+          {lang('ForgotPassword.info.message')}
         </div>
         <form>
           {this.validator.message('email', this.state.email, 'required|email')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.HandleInputChange} />
+              <input className="input is-large" type="email" name="email" placeholder={lang('Auth.input.email')} value={this.state.email} onChange={this.HandleInputChange} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-lock" />
               </span>
             </div>
           </div>
           <button type="button" className="button is-block is-info is-large is-fullwidth" onClick={this.HandleSubmit}>
-            Submit
+            {lang('ForgotPassword.button.submit')}
             <i className="fa fa-sign-in" aria-hidden="true" />
           </button>
         </form>
@@ -96,4 +97,4 @@ class ForgotPassword extends Component {
 
 }
 
-export default ForgotPassword;
+export default withNamespaces()(ForgotPassword);
