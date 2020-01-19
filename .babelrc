@@ -18,7 +18,8 @@
         "@config"   : "./config",
         "@internals": "./internals",
         "@packages" : "./packages",
-        "@binding"  : "./bindings"
+        "@binding"  : "./bindings",
+        "@helpers"  : "./helpers"
       }
     }]
   ]
