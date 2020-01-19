@@ -12,5 +12,9 @@
   "Register.button.submit": "Sign Up",
   "Login.header.forgot_password": "Forgot Password",
   "ForgotPassword.info.message": "Enter your email address and your password will be reset and emailed to you.",
-  "ForgotPassword.button.submit": "Submit"
+  "ForgotPassword.button.submit": "Submit",
+  "ResetPassword.header.title": "Reset Password",
+  "ResetPassword.input.old_password": "Old Password",
+  "ResetPassword.input.new_password": "New Password",
+  "ResetPassword.button.submit": "Reset"
 }

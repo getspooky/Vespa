@@ -8,8 +8,8 @@
  */
 
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {AuthWrapper} from 'app/components/AuthWrapper';
+import {withNamespaces} from 'react-i18next';
 import {HTTP_REQUEST_RESET_PASSWORD} from './service';
 import SimpleReactValidator from 'simple-react-validator';
 import './index.scss';
@@ -69,20 +69,18 @@ class ResetPassword extends Component {
   }
 
   render() {
+    const {t:lang} = this.props;
     return (
-      <AuthWrapper title="Reset Password" links={[
-        { href: '/register' , label: 'Sign Up'},
-        { href: '/login', label: 'Sign In'},
-        { href: '/', label: 'Need Help?'}
+      <AuthWrapper title={lang('ResetPassword.header.title')} links={[
+        { href: '/register' , label: lang('Auth.form.footer.sign_up.label')},
+        { href: '/login', label: lang('Auth.form.footer.sign_in.label')},
+        { href: '/', label: lang('Auth.form.footer.need_help.label')}
       ]}>
-        <div className="alert alert-success">
-          Enter your email address and your password will be reset and emailed to you.
-        </div>
         <form>
           {this.validator.message('old password', this.state.password, 'required|min:08|max:120')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="password" name="password" value={this.state.password} placeholder="Old Password" onChange={this.HandleInputChange} />
+              <input className="input is-large" type="password" name="password" value={this.state.password} placeholder={lang('ResetPassword.input.old_password')} onChange={this.HandleInputChange} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-lock" />
               </span>
@@ -91,14 +89,14 @@ class ResetPassword extends Component {
           {this.validator.message('new password', this.state.confirm_password, 'required|min:08|max:120')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="password" name="confirm_password" value={this.state.password} placeholder="New Password" onChange={this.HandleInputChange} />
+              <input className="input is-large" type="password" name="confirm_password" value={this.state.password} placeholder={lang('ResetPassword.input.new_password')} onChange={this.HandleInputChange} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-lock" />
               </span>
             </div>
           </div>
           <button type="button" className="button is-block is-info is-large is-fullwidth" onClick={this.HandleSubmit}>
-            Reset
+            {lang('ResetPassword.button.submit')}
             <i className="fa fa-sign-in" aria-hidden="true" />
           </button>
         </form>
@@ -108,8 +106,6 @@ class ResetPassword extends Component {
 
 }
 
-ResetPassword.propTypes = {
+ResetPassword.propTypes = {};
 
-};
-
-export default ResetPassword;
+export default withNamespaces()(ResetPassword);
