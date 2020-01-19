@@ -7,5 +7,7 @@
   "Auth.form.footer.forgot_password.label": "Forgot Password",
   "Auth.form.footer.need_help.label": "Need Help ?",
   "Login.header.title": "Login",
-  "Login.button.submit": "Login"
+  "Login.button.submit": "Login",
+  "Register.header.title": "Sign Up",
+  "Register.button.submit": "Sign Up"
 }
