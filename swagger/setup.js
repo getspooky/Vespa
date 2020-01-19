@@ -9,8 +9,13 @@
 
 const express = require('express');
 const app = express();
+const path = require('path');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
+const env = require('dotenv');
+env.config({ path: path.resolve(__dirname,'../','.env') });
+const logger = require('../logs/logger');
+const {appStarted} = logger;
 
 swaggerDocument.paths = {
   ...require('./definitions/login'),
@@ -21,4 +26,4 @@ swaggerDocument.paths = {
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(4200);
+app.listen(appStarted(process.env.SWAGGER_PORT,process.env.SWAGGER_HOST));
