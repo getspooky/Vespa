@@ -19,5 +19,10 @@
   "ResetPassword.button.submit": "Reset",
   "NotFoundPage.status": 404,
   "NotFoundPage.title": "Oops.. You just found an error page..",
-  "NotFoundPage.message": " We are sorry but our service is currently not available…"
+  "NotFoundPage.message": " We are sorry but our service is currently not available…",
+  "NavBar.item.dashboard": "Dashboard",
+  "NavBar.item.users" : "Users",
+  "NavBar.item.posts": "Posts",
+  "NavBar.item.settings": "Settings",
+  "NavBar.item.search": "Search"
 }
