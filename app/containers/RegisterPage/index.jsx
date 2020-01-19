@@ -9,10 +9,11 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import SimpleReactValidator from 'simple-react-validator';
 import {connect} from 'react-redux';
 import {AuthWrapper} from 'app/components/AuthWrapper';
 import { REGISTER_ACTION } from './action';
-import SimpleReactValidator from 'simple-react-validator';
+import {withNamespaces} from 'react-i18next';
 import './index.scss';
 
 function mapStateToProps(state) {
@@ -84,17 +85,18 @@ class Register extends Component {
   }
 
   render() {
+    const {t:lang} = this.props;
     return (
-      <AuthWrapper title="Register" links={[
-        { href: '/login' , label: 'Sign In'},
-        { href: '/forgot/password', label: ' Forgot Password'},
-        { href: '/', label: 'Need Help?'}
+      <AuthWrapper title={lang('Register.header.title')} links={[
+        { href: '/login' , label: lang('Auth.form.footer.sign_in.label')},
+        { href: '/forgot/password', label: lang('Auth.form.footer.forgot_password.label')},
+        { href: '/', label: lang('Auth.form.footer.need_help.label')}
       ]} >
         <form>
           {this.validator.message('username', this.state.username, 'required|min:10')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="text" name="username" placeholder="Username" onChange={this.HandleInputChange} value={this.state.username} />
+              <input className="input is-large" type="text" name="username" placeholder={lang('Auth.input.username')} onChange={this.HandleInputChange} value={this.state.username} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-user" />
               </span>
@@ -103,7 +105,7 @@ class Register extends Component {
           {this.validator.message('email', this.state.email, 'required|email')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="email" name="email" placeholder="Email" onChange={this.HandleInputChange} />
+              <input className="input is-large" type="email" name="email" placeholder={lang('Auth.input.email')} onChange={this.HandleInputChange} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-envelope" />
               </span>
@@ -112,14 +114,14 @@ class Register extends Component {
           {this.validator.message('password', this.state.password, 'required|min:08|max:120')}
           <div className="field">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="password" name="password" placeholder="Password" onChange={this.HandleInputChange} />
+              <input className="input is-large" type="password" name="password" placeholder={lang('Auth.input.password')} onChange={this.HandleInputChange} />
               <span className="icon is-medium is-left">
                 <i className="fa fa-lock" />
               </span>
             </div>
           </div>
           <button type="button" className="button is-block is-info is-large is-fullwidth" onClick={this.HandleSubmit} >
-            Sign Up
+            {lang('Register.button.submit')}
             <i className="fa fa-sign-in" aria-hidden="true" />
           </button>
         </form>
@@ -137,4 +139,4 @@ Register.propTypes = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Register);
+)(withNamespaces()(Register));
