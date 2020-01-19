@@ -1,0 +1,26 @@
+/*
+ * This file is part of the Vespa package.
+ *
+ * (c) Yasser Ameur El Idrissi <getspookydev@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.header {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+
+  .logo {
+    width: 192px;
+    height: 75px;
+    object-fit: cover;
+  }
+
+  .text-default {
+    color: #495057 !important;
+  }
+
+}
