@@ -1,0 +1,42 @@
+{
+  "/password/reset": {
+    "put": {
+      "tags": [
+        "Authentication"
+      ],
+      "summary": "Reset Password",
+      "produces": [
+        "application/xml",
+        "application/json"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "password",
+          "type": "string",
+          "format": "password",
+          "minLength": 8,
+          "required": true
+        },
+        {
+          "in": "body",
+          "name": "confirm_password",
+          "type": "string",
+          "format": "password",
+          "minLength": 8,
+          "required": true
+        },
+        {
+          "in": "body",
+          "name": "token",
+          "type": "string",
+          "format": "string",
+          "minLength": 90,
+          "required": true
+        }
+      ],
+      "responses": {}
+    }
+  }
+}
+
