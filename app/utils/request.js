@@ -23,7 +23,7 @@ function parseJSON({status,data}) {
   if (status === 204 || status === 205) {
     return null;
   }
-  return data.response;
+  return data;
 }
 
 /**
@@ -59,5 +59,4 @@ export default function request(url, options) {
     ...options,
   })
     .then(parseJSON)
-    .catch(showError)
 }
