@@ -26,7 +26,7 @@ export function Footer() {
               </div>
               <div className="col-auto">
                 <a
-                  href="https://github.com/tabler/tabler"
+                  href=""
                   className="btn btn-outline-primary btn-sm"
                 >
                   <i className="fa fa-twitter" /> Twitter
