@@ -1,0 +1,56 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "avatar": "https://avatars3.githubusercontent.com/u/37160072?s=460&v=4",
+      "username": "getspooky",
+      "email": "getspookydev@gmail.com",
+      "email_verified": true,
+      "first_name": "Yasser",
+      "last_name": "Ameur El Idrissi",
+      "address": "-",
+      "city": "Casablanca",
+      "postal_code": 20630,
+      "country": "Morocco",
+      "bio": "FullStack Developer - I love programming",
+      "usage": {
+        "progress": 42,
+        "range": "January 21, 2019 - now"
+      },
+      "activity": "4 minutes ago",
+      "created_at": "January 11, 2019",
+      "Posts": [
+        {
+          "id": 1,
+          "content": "Laravel is an incredible framework built by Taylor Otwell that combines powerful web development features, extensive documentation and an active community .In this tutorial we are going to build a fullstack application complete with an admin panel using laravelDash.",
+          "created_at": "January 31, 2019"
+        },
+        {
+          "id": 2,
+          "content": "In the local development, we see the Expressjs error page a lot. Most probably the countless time in every day. You can do a beautiful representation of the error page, the will be more readable, eye-catching and nice to see.Telescope brings a beautiful error page of your application.\n\nThanks for reading! you can support the express-telescope project directly on\nGitHub: https://github.com/getspooky/express-telescope\nInstall : npm install express-telescope",
+          "created_at": "November 7, 2012"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQweLXiOxFNmva3s9PCyTqNYlCK4K7MHXKjVKCEcLF9uxs7e7C-2g&s",
+      "username": "King",
+      "email": "alivia23@gmail.com",
+      "email_verified": false,
+      "first_name": "Alivia",
+      "last_name": "King",
+      "address": "-",
+      "city": "Casablanca",
+      "postal_code": 20630,
+      "country": "morocco",
+      "bio": "FullStack Developer - I love programming",
+      "usage": {
+        "progress": 92,
+        "range": "December  21, 2018 - now"
+      },
+      "activity": "4 minutes ago",
+      "created_at": "December 03, 2018"
+    }
+  ]
+}
