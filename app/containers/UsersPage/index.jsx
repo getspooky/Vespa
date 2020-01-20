@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import AlertDialog from 'sweetalert2';
 import {connect} from 'react-redux';
+import {withNamespaces} from 'react-i18next';
 import {MasterWrapper} from 'app/components/MasterWrapper';
 import {GET_USERS_ACTION,DELETE_USERS_ACTION} from './action';
 import './index.scss';
@@ -67,6 +68,7 @@ class Users extends Component {
   }
 
   render() {
+    const {t:lang} = this.props;
     return (
       <MasterWrapper>
         <h1 className="page-title">
@@ -79,15 +81,15 @@ class Users extends Component {
                 <table className="table table-hover table-outline table-vcenter text-nowrap card-table">
                   <thead>
                   <tr>
-                    <th className="text-center">id</th>
+                    <th className="text-center">{lang('UserPage.table.id')}</th>
                     <th className="text-center w-1">
                       <i className="icon-people" />
                     </th>
-                    <th>User</th>
-                    <th className="text-center">email</th>
-                    <th>Usage</th>
-                    <th className="text-center">Payment</th>
-                    <th>Activity</th>
+                    <th>{lang('UserPage.table.user')}</th>
+                    <th className="text-center">{lang('UserPage.table.email')}</th>
+                    <th>{lang('UserPage.table.usage')}</th>
+                    <th className="text-center">{lang('UserPage.table.payment')}</th>
+                    <th>{lang('UserPage.table.activity')}</th>
                     <th className="text-center">
                       <i className="icon-settings" />
                     </th>
@@ -115,7 +117,7 @@ class Users extends Component {
                         <td>
                           <div>{username}</div>
                           <div className="small text-muted">
-                            Registered: {created_at}
+                            {lang('UserPage.table.div.registered')}: {created_at}
                           </div>
                         </td>
                         <td>
@@ -123,7 +125,7 @@ class Users extends Component {
                             {email}
                           </div>
                           <span className={`badge ${email_verified ? 'badge-success' : 'badge-danger'}`}>
-                            Verified
+                            {lang('UserPage.table.span.verified')}
                           </span>
                         </td>
                         <td>
@@ -152,7 +154,7 @@ class Users extends Component {
                           <i className="payment payment-visa" />
                         </td>
                         <td>
-                          <div className="small text-muted">Last login</div>
+                          <div className="small text-muted">{lang('UserPage.table.div.last_login')}</div>
                           <div>{activity}</div>
                         </td>
                         <td className="text-center">
@@ -209,4 +211,4 @@ Users.propTypes = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Users);
+)(withNamespaces()(Users));
