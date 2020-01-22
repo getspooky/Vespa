@@ -6,7 +6,6 @@
       ],
       "summary": "Reset Password",
       "produces": [
-        "application/xml",
         "application/json"
       ],
       "parameters": [
