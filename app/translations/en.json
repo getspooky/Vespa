@@ -35,5 +35,6 @@
   "UserPage.table.button.delete": "Delete",
   "UserPage.table.div.registered": "Registered",
   "UserPage.table.div.last_login": "Last login",
-  "UserPage.table.span.verified": "Verified"
+  "UserPage.table.span.verified": "Verified",
+  "UserPage.table.span.not_verified": "Not Verified"
 }

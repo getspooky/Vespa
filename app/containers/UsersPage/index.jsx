@@ -125,7 +125,7 @@ class Users extends Component {
                             {email}
                           </div>
                           <span className={`badge ${email_verified ? 'badge-success' : 'badge-danger'}`}>
-                            {lang('UserPage.table.span.verified')}
+                            {email_verified ? lang('UserPage.table.span.verified') : lang('UserPage.table.span.not_verified')}
                           </span>
                         </td>
                         <td>
