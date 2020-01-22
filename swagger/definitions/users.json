@@ -1,0 +1,76 @@
+{
+  "/users": {
+    "get": {
+      "tags": [
+        "Users"
+      ],
+      "summary": "Get users data",
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "A User object",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "username": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "email": {
+                "type": "email"
+              },
+              "email_verified": {
+                "type": "boolean"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "postal_code": {
+                "type": "number"
+              },
+              "country": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
+              },
+              "activity": {
+                "type": "string"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "usage": {
+                "type": "object",
+                "properties": {
+                  "progress": {
+                    "type": "integer"
+                  },
+                  "range": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

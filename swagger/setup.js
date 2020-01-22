@@ -18,10 +18,11 @@ const logger = require('../logs/logger');
 const {appStarted} = logger;
 
 swaggerDocument.paths = {
-  ...require('./definitions/login'),
-  ...require('./definitions/register'),
-  ...require('./definitions/password/forgot'),
-  ...require('./definitions/password/reset'),
+  ...require('./definitions/login.json'),
+  ...require('./definitions/register.json'),
+  ...require('./definitions/password/forgot.json'),
+  ...require('./definitions/password/reset.json'),
+  ...require('./definitions/users.json'),
 };
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
