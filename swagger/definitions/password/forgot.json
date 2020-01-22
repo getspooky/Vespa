@@ -6,7 +6,6 @@
       ],
       "summary": "Forgot Password",
       "produces": [
-        "application/xml",
         "application/json"
       ],
       "parameters": [
