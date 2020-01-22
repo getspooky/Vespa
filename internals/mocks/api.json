@@ -52,5 +52,37 @@
       "activity": "4 minutes ago",
       "created_at": "December 03, 2018"
     }
+  ],
+  "Posts": [
+    {
+      "id": 1,
+      "content": "Laravel is an incredible framework built by Taylor Otwell that combines powerful web development features, extensive documentation and an active community .In this tutorial we are going to build a fullstack application complete with an admin panel using laravelDash.",
+      "created_at": "January 31, 2019",
+      "user": {
+        "_id": 1,
+        "username": "getspooky",
+        "avatar": "https://avatars3.githubusercontent.com/u/37160072?s=460&v=4"
+      }
+    },
+    {
+      "id": 2,
+      "content": "In the local development, we see the Expressjs error page a lot. Most probably the countless time in every day. You can do a beautiful representation of the error page, the will be more readable, eye-catching and nice to see.Telescope brings a beautiful error page of your application.\n\nThanks for reading! you can support the express-telescope project directly on\nGitHub: https://github.com/getspooky/express-telescope\nInstall : npm install express-telescope",
+      "created_at": "November 7, 2012",
+      "user": {
+        "id": 2,
+        "username": "Mr Robot",
+        "avatar": "https://img.cinemablend.com/filter:scale/quill/0/b/2/8/e/4/0b28e4aa54e1e313ce1dfa25357786f1d2add1a5.png?mw=600"
+      }
+    },
+    {
+      "id": 3,
+      "content": "React, as we know it, is a JavaScript library to build amazing user interfaces. But not everybody is using the same tools or know all of the great ones out there that help make the react development experience funner and more proactive.\n\nIf you haven't used react yet or have friends that might be interested in using it, what do you say when they ask you why they should use the library? Besides telling them how great the library is (which should be the first thing), I also like to mention that the tools created by the open source community helps bring the experience to a whole new level of excitement.\n\nHere are 22 tools you can use to build your react apps in 2019 (This list is not in order of their importance)\n\n1. webpack-bundle-analyzer\nEver wondered which packages or parts of your app is taking up all the space? Well, you can find out if you use the webpack-bundle-analyzer. This package will help you identify output files that take up the most space.\n\nIt will create a live server and present to you an interactive treemap visualization of the contents of your bundles. With this in your toolkit, you're able to see where the presented files are located, their gzip size, parsed size, and their belonging parents/children.\n\nThe benefits? Well, you can optimize your react app based on what you see!",
+      "created_at": "November 10, 2014",
+      "user": {
+        "_id": 3,
+        "username": "Yasser1223",
+        "avatar": "https://www.blexar.com/avatar.png"
+      }
+    }
   ]
 }
