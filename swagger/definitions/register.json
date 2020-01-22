@@ -6,7 +6,6 @@
       ],
       "summary": "Register",
       "produces": [
-        "application/xml",
         "application/json"
       ],
       "parameters": [

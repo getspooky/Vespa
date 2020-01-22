@@ -6,7 +6,6 @@
       ],
       "summary": "Login",
       "produces": [
-        "application/xml",
         "application/json"
       ],
       "parameters": [
