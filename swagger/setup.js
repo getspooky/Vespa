@@ -26,4 +26,6 @@ swaggerDocument.paths = {
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(appStarted(process.env.SWAGGER_PORT,process.env.SWAGGER_HOST));
+const PORT = process.env.SWAGGER_PORT || 4200;
+
+app.listen(PORT,appStarted(PORT,process.env.SWAGGER_HOST));
