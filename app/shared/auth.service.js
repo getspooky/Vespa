@@ -42,7 +42,7 @@ export async function HTTP_REQUEST_UPDATE_AUTH_USER(payload) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(payload)
+    data: JSON.stringify(payload)
   });
 }
 

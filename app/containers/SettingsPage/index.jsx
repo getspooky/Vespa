@@ -12,8 +12,7 @@ import PropTypes from 'prop-types';
 import AlertDialog from 'sweetalert2';
 import {connect} from 'react-redux';
 import {MasterWrapper} from 'app/components/MasterWrapper';
-import {UPDATE_SETTINGS_ACTION} from './action';
-import {GET_AUTH_USER_ACTION} from 'app/shared/auth.action';
+import {GET_AUTH_USER_ACTION,UPDATE_SETTINGS_AUTH_USER_ACTION} from 'app/shared/auth.action';
 import Countries from 'app/data/Countries.json';
 
 function mapStateToProps(state) {
@@ -25,7 +24,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     DISPATCH_GET_AUTH_USER: () => dispatch(GET_AUTH_USER_ACTION()),
-    DISPATCH_UPDATE_SETTINGS: (id,payload) => dispatch(UPDATE_SETTINGS_ACTION(id,payload)),
+    DISPATCH_UPDATE_SETTINGS: (payload) => dispatch(UPDATE_SETTINGS_AUTH_USER_ACTION(payload)),
   };
 }
 
@@ -37,18 +36,7 @@ class Settings extends Component {
    */
   constructor(props) {
     super(props);
-    this.state = {
-      avatar: null,
-      username: null,
-      email: null,
-      first_name: null,
-      last_name: null,
-      address: null,
-      city: null,
-      postal_code: null,
-      country: null,
-      bio: null
-    };
+    this.state = { avatar: '', username: '', email: '', first_name: '', last_name: '', address: '', city: '', postal_code: '', country: '', bio: '' };
     // bind event handlers in class components.
     this.HandleInputChange = this.HandleInputChange.bind(this);
     this.HandleUpdateSettings = this.HandleUpdateSettings.bind(this);
@@ -59,7 +47,11 @@ class Settings extends Component {
     await this.props.DISPATCH_GET_AUTH_USER();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {}
+  async UNSAFE_componentWillReceiveProps(nextProps) {
+     this.setState({
+       ... await nextProps.STATE_GET_SETTINGS
+     });
+  }
 
   /**
    * Handle Input Change.
@@ -70,6 +62,7 @@ class Settings extends Component {
    */
   HandleInputChange(event) {
     this.setState({
+      ...this.state,
       [event.target.name]:event.target.value,
     });
   }
@@ -82,14 +75,14 @@ class Settings extends Component {
    * @returns {void}
    */
    HandleUpdateSettings(event) {
-    this.props.DISPATCH_UPDATE_SETTINGS(1,this.state).then(()=>{
+    this.props.DISPATCH_UPDATE_SETTINGS(this.state).then(()=>{
       AlertDialog.fire(
         'Good job!',
         'Your Profile is updated successfully',
         'success'
       );
     });
-  }
+   }
 
   render() {
     const {
@@ -103,7 +96,7 @@ class Settings extends Component {
       postal_code,
       country,
       bio
-    } = this.props.STATE_GET_SETTINGS;
+    } = this.state;
 
     return (
       <MasterWrapper>
@@ -146,6 +139,7 @@ class Settings extends Component {
                     className="form-control"
                     name="email"
                     placeholder={email}
+                    onChange={this.HandleInputChange}
                   />
                 </div>
               </div>
@@ -155,9 +149,9 @@ class Settings extends Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder={first_name}
                     name="first_name"
                     onChange={this.HandleInputChange}
+                    placeholder={first_name}
                   />
                 </div>
               </div>
@@ -167,9 +161,9 @@ class Settings extends Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder={last_name}
                     name="last_name"
                     onChange={this.HandleInputChange}
+                    placeholder={last_name}
                   />
                 </div>
               </div>
@@ -179,9 +173,9 @@ class Settings extends Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder={address}
                     name="address"
                     onChange={this.HandleInputChange}
+                    placeholder={address}
                   />
                 </div>
               </div>
@@ -191,9 +185,9 @@ class Settings extends Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder={city}
                     name="city"
                     onChange={this.HandleInputChange}
+                    placeholder={city}
                   />
                 </div>
               </div>
@@ -203,9 +197,9 @@ class Settings extends Component {
                   <input
                     type="number"
                     className="form-control"
-                    placeholder={postal_code}
                     name="postal_code"
                     onChange={this.HandleInputChange}
+                    placeholder={postal_code}
                   />
                 </div>
               </div>
@@ -215,7 +209,7 @@ class Settings extends Component {
                   <select className="form-control custom-select" name="country" onChange={this.HandleInputChange}
                   >
                     {Countries.map(c=>(
-                      <option key={c} selected={c === country} value={c}>{c}</option>
+                      <option key={c} defaultValue={c === country} value={c}>{c}</option>
                     ))}
                   </select>
                 </div>
@@ -226,9 +220,9 @@ class Settings extends Component {
                   <textarea
                     rows="5"
                     className="form-control"
-                    placeholder={bio}
                     name="bio"
                     onChange={this.HandleInputChange}
+                    placeholder={bio}
                   />
                 </div>
               </div>
@@ -248,7 +242,7 @@ class Settings extends Component {
 
 Settings.propTypes = {
   STATE_GET_SETTINGS: PropTypes.any.isRequired,
-  DISPATCH_GET_SETTINGS: PropTypes.func.isRequired,
+  DISPATCH_UPDATE_SETTINGS: PropTypes.func.isRequired,
 };
 
 export default connect(
