@@ -18,7 +18,7 @@ import binding from 'bindings/api.binding.json';
  * @returns {Promise<Response>}
  */
 export async function HTTP_REQUEST_SHOW_AUTH_USER() {
-  const requestURL = binding['[GET]_AUTH_API_BINDING'];
+  const requestURL = binding['[GET_PUT_DELETE]_AUTH_API_BINDING'];
   return await request(requestURL,{
     method: 'GET',
     headers: {
@@ -26,3 +26,23 @@ export async function HTTP_REQUEST_SHOW_AUTH_USER() {
     }
   });
 }
+
+/**
+ *
+ * @export
+ * @function
+ * @name HTTP_REQUEST_UPDATE_AUTH_USER
+ * @param {object} payload
+ * @returns {Promise<Response>}
+ */
+export async function HTTP_REQUEST_UPDATE_AUTH_USER(payload) {
+  const requestURL = binding['[GET_PUT_DELETE]_AUTH_API_BINDING'];
+  return await request(requestURL,{
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  });
+}
+
