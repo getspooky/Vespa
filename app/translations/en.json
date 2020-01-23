@@ -36,5 +36,15 @@
   "UserPage.table.div.registered": "Registered",
   "UserPage.table.div.last_login": "Last login",
   "UserPage.table.span.verified": "Verified",
-  "UserPage.table.span.not_verified": "Not Verified"
+  "UserPage.table.span.not_verified": "Not Verified",
+  "SettingsPage.label.avatar_url": "Avatar URL",
+  "SettingsPage.label.username": "Username",
+  "SettingsPage.label.email": "Email",
+  "SettingsPage.label.first_name": "First Name",
+  "SettingsPage.label.last_name": "Last Name",
+  "SettingsPage.label.address": "Address",
+  "SettingsPage.label.city": "City",
+  "SettingsPage.label.postal_code": "Postal Code",
+  "SettingsPage.label.country": "Country",
+  "SettingsPage.label.about_me": "About Me"
 }

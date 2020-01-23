@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import AlertDialog from 'sweetalert2';
 import {connect} from 'react-redux';
 import {MasterWrapper} from 'app/components/MasterWrapper';
+import {withNamespaces} from 'react-i18next';
 import {GET_AUTH_USER_ACTION,UPDATE_SETTINGS_AUTH_USER_ACTION} from 'app/shared/auth.action';
 import Countries from 'app/data/Countries.json';
 
@@ -97,6 +98,7 @@ class Settings extends Component {
       country,
       bio
     } = this.state;
+    const {t:lang} = this.props;
 
     return (
       <MasterWrapper>
@@ -109,7 +111,7 @@ class Settings extends Component {
             <div className="row">
               <div className="col-md-5">
                 <div className="form-group">
-                  <label className="form-label">Avatar URL</label>
+                  <label className="form-label">{lang('SettingsPage.label.avatar_url')}</label>
                   <input
                     type="text"
                     className="form-control"
@@ -121,7 +123,7 @@ class Settings extends Component {
               </div>
               <div className="col-sm-6 col-md-3">
                 <div className="form-group">
-                  <label className="form-label">Username</label>
+                  <label className="form-label">{lang('SettingsPage.label.username')}</label>
                   <input
                     type="text"
                     className="form-control"
@@ -133,7 +135,7 @@ class Settings extends Component {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="form-group">
-                  <label className="form-label">Email address</label>
+                  <label className="form-label">{lang('SettingsPage.label.email')}</label>
                   <input
                     type="email"
                     className="form-control"
@@ -145,7 +147,7 @@ class Settings extends Component {
               </div>
               <div className="col-sm-6 col-md-6">
                 <div className="form-group">
-                  <label className="form-label">First Name</label>
+                  <label className="form-label">{lang('SettingsPage.label.first_name')}</label>
                   <input
                     type="text"
                     className="form-control"
@@ -157,7 +159,7 @@ class Settings extends Component {
               </div>
               <div className="col-sm-6 col-md-6">
                 <div className="form-group">
-                  <label className="form-label">Last Name</label>
+                  <label className="form-label">{lang('SettingsPage.label.last_name')}</label>
                   <input
                     type="text"
                     className="form-control"
@@ -169,7 +171,7 @@ class Settings extends Component {
               </div>
               <div className="col-md-12">
                 <div className="form-group">
-                  <label className="form-label">Address</label>
+                  <label className="form-label">{lang('SettingsPage.label.address')}</label>
                   <input
                     type="text"
                     className="form-control"
@@ -181,7 +183,7 @@ class Settings extends Component {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="form-group">
-                  <label className="form-label">City</label>
+                  <label className="form-label">{lang('SettingsPage.label.city')}</label>
                   <input
                     type="text"
                     className="form-control"
@@ -193,7 +195,7 @@ class Settings extends Component {
               </div>
               <div className="col-sm-6 col-md-3">
                 <div className="form-group">
-                  <label className="form-label">Postal Code</label>
+                  <label className="form-label">{lang('SettingsPage.label.postal_code')}</label>
                   <input
                     type="number"
                     className="form-control"
@@ -205,7 +207,7 @@ class Settings extends Component {
               </div>
               <div className="col-md-5">
                 <div className="form-group">
-                  <label className="form-label">Country</label>
+                  <label className="form-label">{lang('SettingsPage.label.country')}</label>
                   <select className="form-control custom-select" name="country" onChange={this.HandleInputChange}
                   >
                     {Countries.map(c=>(
@@ -216,7 +218,7 @@ class Settings extends Component {
               </div>
               <div className="col-md-12">
                 <div className="form-group mb-0">
-                  <label className="form-label">About Me</label>
+                  <label className="form-label">{lang('SettingsPage.label.about_me')}</label>
                   <textarea
                     rows="5"
                     className="form-control"
@@ -248,4 +250,4 @@ Settings.propTypes = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Settings);
+)(withNamespaces()(Settings));
