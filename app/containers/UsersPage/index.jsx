@@ -71,9 +71,10 @@ class Users extends Component {
     const {t:lang} = this.props;
     return (
       <MasterWrapper>
-        <h1 className="page-title">
-          Users
-        </h1>
+        <Link to="/create/user" className="btn btn-primary m-b-15">
+          <i className="fa fa-user-plus" />
+           Create User
+        </Link>
         <div className="row row-cards row-deck">
           <div className="col-12">
             <div className="card">
