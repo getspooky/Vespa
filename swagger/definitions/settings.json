@@ -1,0 +1,87 @@
+{
+  "/settings": {
+    "put": {
+      "tags": [
+        "Settings"
+      ],
+      "summary": "Update authenticated user information",
+      "produces": [
+        "application/xml",
+        "application/json"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "username",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "avatar",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "email",
+          "type": "string",
+          "format": "email",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "first_name",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "last_name",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "address",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "city",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "postal_code",
+          "type": "number",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "country",
+          "type": "string",
+          "format": "string",
+          "required": false
+        },
+        {
+          "in": "body",
+          "name": "bio",
+          "type": "string",
+          "format": "string",
+          "required": false
+        }
+      ],
+      "responses": {}
+    }
+  }
+}
