@@ -29,10 +29,6 @@ describe('Navbar component', () => {
     expect(wrapper.find('.header.py-2').length).toEqual(1);
   });
 
-  it('should contains profile text', () => {
-    expect(wrapper.find('.dropdown-item').at(0).text().trim()).toEqual('Profile');
-  });
-
 });
 
 

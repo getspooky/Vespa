@@ -20,25 +20,13 @@ function NavBar({t:lang}) {
           <img src={require('../../images/icon-512x512.png')} className="header-brand-img logo" alt="vespa logo" />
           <div className="d-flex order-lg-2 ml-auto">
             <div className="dropdown">
-              <a href="#" className="nav-link pr-0 leading-none" data-toggle="dropdown">
+              <a onClick={(event)=>event.preventDefault()} className="nav-link pr-0 leading-none">
                 <span className="avatar" style={{backgroundImage: 'url(https://avatars0.githubusercontent.com/u/37160072?s=400&u=e8360027c9964e91464782fb8c9b334af1e64333&v=4)'}} />
                 <span className="ml-2 d-none d-lg-block">
                     <span className="text-default">Yasser Ameur</span>
                     <small className="text-muted d-block mt-0">Developer</small>
                   </span>
               </a>
-              <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                <a className="dropdown-item" href="#">
-                  <i className="dropdown-icon fe fe-user" /> {lang('NavBar.dropdown-menu.profile')}
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item" href="#">
-                  <i className="dropdown-icon fe fe-help-circle" /> {lang('NavBar.dropdown-menu.help_circle')}
-                </a>
-                <a className="dropdown-item" href="#">
-                  <i className="dropdown-icon fe fe-log-out" /> {lang('NavBar.dropdown-menu.log_out')}
-                </a>
-              </div>
             </div>
           </div>
         </div>
