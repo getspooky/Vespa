@@ -25,6 +25,7 @@ swaggerDocument.paths = {
   ...require('./definitions/users.json'),
   ...require('./definitions/auth'),
   ...require('./definitions/settings'),
+  ...require('./definitions/posts.json')
 };
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
