@@ -58,7 +58,7 @@ SWAGGER_HOST=
 </pre>
 
 ### 3. Run The Installer
-Lastly, we can install voyager.
+Lastly, we can install vespa.
 <pre>
  npm run vespa:install
 </pre>
