@@ -43,9 +43,7 @@ Installation is done using the [npm install command](https://docs.npmjs.com/down
  npm install -g getvespa
 </pre>
 
-### 2. Add the DB Credentials & APP_URL & Swagger host/port
-Next make sure to create a new database and add your database credentials to your .env file:
-
+### 2. Add the APP_URL & Swagger host/port
 <pre>
 APP_NAME=
 APP_KEY=
