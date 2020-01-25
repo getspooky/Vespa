@@ -21,7 +21,7 @@ function TopMenu({t:lang}) {
         <div className="row align-items-center">
           <div className="col-lg-3 ml-auto">
             <div className="input-group md-form form-sm form-2 pl-0">
-             <input className="form-control my-0 py-1 amber-border m-l-5" type="text" placeholder={lang('NavBar.item.search')} aria-label="Search" />
+             <input className="form-control my-0 py-1 amber-border m-l-5" type="text" placeholder={lang('TopMenu.item.search')} aria-label="Search" />
               <div className="input-group-append">
                 <span className="input-group-text amber lighten-3" id="basic-text1">
                   <i className="fa fa-search text-grey" aria-hidden="true" />
