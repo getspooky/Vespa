@@ -25,7 +25,7 @@ function PrivateRoute({ component: Component, ...rest }) {
     <Route
       {...rest}
       render={props =>
-        STATE_GET_AUTH.token === null && !STATE_GET_AUTH.isAuthenticated ? (
+        STATE_GET_AUTH.token !== null && STATE_GET_AUTH.isAuthenticated ? (
           <Component {...props} />
         ) : (
           <Redirect to="/" />
