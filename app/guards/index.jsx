@@ -1,6 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
+function mapStateToProps(state) {
+  return {
+    STATE_GET_AUTH: state.AUTH_REDUCER.Auth,
+  };
+}
 
 /**
  * Protect private routes for unauthorized access.
@@ -13,11 +20,12 @@ import PropTypes from 'prop-types';
  * @returns {*}
  */
 function PrivateRoute({ component: Component, ...rest }) {
+  const { STATE_GET_AUTH } = rest;
   return (
     <Route
       {...rest}
       render={props =>
-        localStorage.getItem('_token') !== null ? (
+        STATE_GET_AUTH.token === null && !STATE_GET_AUTH.isAuthenticated ? (
           <Component {...props} />
         ) : (
           <Redirect to="/" />
@@ -31,4 +39,4 @@ PrivateRoute.propTypes = {
   component: PropTypes.any.isRequired,
 };
 
-export default withRouter(PrivateRoute);
+export default connect(mapStateToProps, {})(withRouter(PrivateRoute));
