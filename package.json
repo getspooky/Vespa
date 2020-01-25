@@ -1,5 +1,5 @@
 {
-  "name": "vespa",
+  "name": "getvespa",
   "version": "1.0.0",
   "description": "Beautifully designed administration panel for (Nodejs, Laravel, Java Spring, Ruby On Rails , Django , Asp.net Core ...)",
   "scripts": {
