@@ -1,0 +1,69 @@
+{
+  "/post": {
+    "post": {
+      "tags": [
+        "Post"
+      ],
+      "summary": "Add New Post",
+      "produces": [
+        "application/json"
+      ],
+      "parameters": [{
+          "in": "body",
+          "name": "title",
+          "type": "string",
+          "format": "string",
+          "minLength": 10,
+          "maxLength": 100,
+          "required": true
+        },
+        {
+          "in": "body",
+          "name": "content",
+          "type": "string",
+          "format": "string",
+          "minLength": 150,
+          "required": true
+        },
+        {
+          "in": "body",
+          "name": "user_id",
+          "type": "integer",
+          "required": true
+        }
+      ],
+      "responses": {}
+    },
+    "get": {
+      "tags": [
+        "Post"
+      ],
+      "summary": "Get posts data",
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "A Post object",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "user_id": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

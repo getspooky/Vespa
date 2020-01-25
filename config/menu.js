@@ -12,42 +12,24 @@ export default [
     "label" : "Dashboard",
     "icon"  : "fa fa-dashboard",
     "href"  : "/dashboard",
-    "translation"  : "TopNav.item->0"
+    "translation"  : "TopMenu.item.dashboard"
   },
   {
     "label" : "Users",
     "icon"  : "fa fa-users",
     "href"  : "/users",
-    "translation"  : "TopNav.item->1"
+    "translation"  : "TopMenu.item.users"
   },
   {
     "label" : "Posts",
     "icon"  : "fa fa-pencil-square",
     "href"  : "/posts",
-    "translation"  : "TopNav.item->2"
-  },
-  {
-    "label" : "Comments",
-    "icon"  : "fa fa-commenting",
-    "href"  : "/comments",
-    "translation"  : "TopNav.item->3",
-  },
-  {
-    "label" : "Shopping",
-    "icon"  : "fa fa-shopping-bag",
-    "href"  : "/shopping",
-    "translation"  : "TopNav.item->4"
-  },
-  {
-    "label" : "Payment",
-    "icon"  : "fa fa-credit-card-alt",
-    "href"  : "/payment",
-    "translation"  : "TopNav.item->5",
+    "translation"  : "TopMenu.item.posts"
   },
   {
     "label" : "Settings",
     "icon"  : "fa fa-cogs",
     "href"  : "/settings",
-    "translation"  : "TopNav.item->6",
+    "translation"  : "TopMenu.item.settings",
   }
 ];
