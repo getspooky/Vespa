@@ -11,6 +11,26 @@ import request from 'app/utils/request';
 import binding from 'bindings/api.binding.json';
 
 /**
+ * Send register request to the application.
+ *
+ * @export
+ * @function
+ * @name HTTP_REQUEST_REGISTER
+ * @param payload
+ * @returns {Promise<Response>}
+ */
+export async function HTTP_REQUEST_REGISTER(payload) {
+  const requestURL = binding['[POST]_REGISTER_API_BINDING'];
+  return await request(requestURL,{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: payload
+  });
+}
+
+/**
  * @async
  * @export
  * @function
