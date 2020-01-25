@@ -16,7 +16,8 @@ import DashboardPage from '../containers/DashboardPage';
 import UsersPage from '../containers/UsersPage';
 import PostsPage from '../containers/PostsPage';
 import SettingsPage from '../containers/SettingsPage';
-import ProfilePage from '../containers/ProfilePage';
+import CreateUserPage from '../containers/CreateUserPage';
+import CreatePostPage from '../containers/CreatePostPage';
 import NotFountPage from '../containers/NotFoundPage';
 
 export default [
@@ -31,15 +32,17 @@ export default [
   // Forgot Password
   { id:'#forgot', path: '/forgot/password/', component: ForgotPassword},
   // Dashboard Page
-  { id:'#dashboard', path:'/dashboard', component: DashboardPage },
+  { id:'#dashboard', path:'/dashboard', mode:'private', component: DashboardPage },
   // Users
-  { id:'#users', path:'/users', component: UsersPage },
+  { id:'#users', path:'/users', mode:'private', component: UsersPage },
   // Posts
-  { id:'#posts', path:'/posts', component: PostsPage },
+  { id:'#posts', path:'/posts', mode:'private', component: PostsPage },
   // Settings
-  { id:'#settings', path:'/settings', component: SettingsPage },
-  // Profile
-  { id:'#profile', path:'/profile/:id', component: ProfilePage },
+  { id:'#settings', path:'/settings', mode:'private', component: SettingsPage },
+  // Create User
+  { id:'#createUser', path:'/create/user', mode:'private', component: CreateUserPage },
+  // Create Post
+  { id:'#createPost', path:'/create/post', mode:'private', component: CreatePostPage },
   // Page not found
   { id:'#pagenotfound', path:'*', component: NotFountPage}
 ]
