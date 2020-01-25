@@ -3,7 +3,7 @@
 🚦Vespa is not a CMS or a blogging platform but it can be used to create a CMS or a blogging platform, but out of the box it is neither of those. With Vespa you can create any kind of application your heart desires.
 
 <p align="center">
-    <img src="docs/cover.png" alt="vespa" style="margin-bottom:20px;">
+    <img src="docs/cover.png" alt="vespa" style="margin-bottom:20px;margin-top:20px;">
     </br>
     <a href="">
     <img alt="npm" src="https://img.shields.io/npm/dt/getvespa">
