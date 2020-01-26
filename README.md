@@ -3,7 +3,7 @@
 🚦Vespa is not a CMS or a blogging platform but it can be used to create a CMS or a blogging platform, but out of the box it is neither of those. With Vespa you can create any kind of application your heart desires.
 
 <p align="center">
-    <img src="docs/cover.png" alt="vespa" style="margin-bottom:20px;margin-top:20px;">
+    <img src="docs/media/cover.png" alt="vespa" style="margin-bottom:20px;margin-top:20px;">
     </br>
     <a href="">
     <img alt="npm" src="https://img.shields.io/npm/dt/getvespa">
@@ -82,7 +82,7 @@ Installation is done using the [npm install command](https://docs.npmjs.com/down
 ```
 
 ### 2. Add the APP_URL & Swagger host/port
-<pre>
+```bash
 APP_NAME=
 APP_KEY=
 APP_ENV=env
@@ -95,9 +95,9 @@ SWAGGER_HOST=
 
 ### 3. Run The Installer
 Lastly, we can install vespa.
-<pre>
+```bash
  getvespa install demo
-</pre>
+```
 
 And we're all good to go! 
 Start up a local development server with `npm run start` 
