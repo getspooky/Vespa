@@ -27,7 +27,6 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation Steps](#Installation-Steps)
-- [How It Works](#how-it-works-mini-guides)
 - [Browser Support](#Browser-Support)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
