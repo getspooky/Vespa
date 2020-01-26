@@ -5,7 +5,7 @@ Vespa is simply an admin for your app. Whatever you want your app to do on the b
 🚦Vespa is not a CMS or a blogging platform but it can be used to create a CMS or a blogging platform, but out of the box it is neither of those. With Vespa you can create any kind of application your heart desires.
 
 <p align="center">
-    <img src="docs/cover.png" alt="vespa" style="margin-bottom:20px;">
+    <img src="docs/media/cover.png" alt="vespa" style="margin-bottom:20px;">
     </br>
     <a href="">
     <img alt="npm" src="https://img.shields.io/npm/dt/getvespa">
@@ -24,6 +24,19 @@ Vespa is simply an admin for your app. Whatever you want your app to do on the b
   <sub>Created by and maintained with ❤️ by  <a href="https://github.com/getspooky">getspooky</a>.</sub>
 </div>
 
+## Table of Contents
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation Steps](#Installation-Steps)
+- [Quick Example](#getting-started)
+- [How It Works](#how-it-works-mini-guides)
+- [Browser Support](#Browser-Support)
+- [Production](#production)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 Here are some of the awesome Vespa features you'll enjoy ✌💪
@@ -35,6 +48,12 @@ Here are some of the awesome Vespa features you'll enjoy ✌💪
 - CRUD Builder
 - JWT authentication
 - Command-line interface
+
+## Requirements
+Vespa has a few requirements you should be aware of before installing:
+
+- Node.js >= 8.0.0
+- npm >= 6.10.3
 
 ## Installation Steps
 
@@ -91,13 +110,7 @@ Start up a local development server with `npm run start`
 
 To see your application in action, open a browser window and navigate to http://localhost:8080. You should see the Vespa default information page:
 
-![Welcome to our Vespa ❤](docs/Hello.png)
-
-## Requirements
-Vespa has a few requirements you should be aware of before installing:
-
-- Node.js >= 8.0.0
-- npm >= 6.10.3
+![Welcome to our Vespa ❤](docs/media/Hello.png)
 
 ## Browser Support
 
@@ -107,6 +120,13 @@ Vespa supports reasonably recent versions of the following browsers:
 - Apple Safari
 - Microsoft Edge
 - Mozilla Firefox
+
+## How It Works (mini guides)
+
+This section is intended for giving you a detailed explanation of
+how a particular functionality works. Maybe you are just curious about
+how it works, or perhaps you are lost and confused while reading the code,
+I hope it provides some guidance to you.
 
 ## Security Vulnerabilities
 
