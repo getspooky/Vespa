@@ -38,17 +38,38 @@ Here are some of the awesome Vespa features you'll enjoy ✌💪
 
 ## Installation Steps
 
+### using GitHub:
+
+The easiest way to get started is to clone the repository:
+
+```bash
+# Get the latest snapshot
+git clone https://github.com/getspooky/vespa.git myproject
+
+# Change directory
+cd myproject
+
+# Install NPM dependencies
+npm install
+
+# Then simply start your app
+npm run start
+```
+
+### using npm:
+
 ### 1. Require the Package
 This is a Node.js module available through the npm registry.
 Installation is done using the [npm install command](https://docs.npmjs.com/downloading-and-installing-packages-locally):
-<pre>
+
+```bash
  npm install -g getvespa
-</pre>
+```
 
 ### 2. Add the DB Credentials & APP_URL & Swagger host/port
 Next make sure to create a new database and add your database credentials to your .env file:
 
-<pre>
+```bash
 APP_NAME=
 APP_KEY=
 APP_ENV=env
@@ -57,7 +78,7 @@ APP_PORT=
 APP_DEBUG=
 SWAGGER_PORT=
 SWAGGER_HOST=
-</pre>
+```
 
 ### 3. Run The Installer
 Lastly, we can install voyager.
@@ -86,10 +107,6 @@ Vespa supports reasonably recent versions of the following browsers:
 - Apple Safari
 - Microsoft Edge
 - Mozilla Firefox
-
-## Schema explanation
-
-![Schema](docs/Schema.png)
 
 ## Security Vulnerabilities
 
