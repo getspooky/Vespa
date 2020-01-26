@@ -21,6 +21,17 @@ module.exports = {
    */
     name : env('APP_NAME'),
 
+   /*
+   |--------------------------------------------------------------------------
+   | Application Logo
+   |--------------------------------------------------------------------------
+   |
+   | This value is the logo of your application. This value is used when
+   | Vespa needs to place the application's logo in the navbar component.
+   |
+   */
+   logo : env('APP_LOGO'),
+
   /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -29,10 +40,10 @@ module.exports = {
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
     | services the application utilizes. Set this in your ".env" file.
-    | env: production, development, test
+    | env: production, development
     |
     */
-    env : env('APP_ENV', 'test'),
+    env : env('APP_ENV', 'development'),
 
   /*
    |--------------------------------------------------------------------------
