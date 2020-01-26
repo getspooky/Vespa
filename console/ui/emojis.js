@@ -11,6 +11,7 @@ const {get} = require('node-emoji');
 
  module.exports = {
    OPEN_HAND: get('open_hands'),  
+   CHECK_MARK: get('heavy_check_mark'),
    HEART: get('heart'),
    COFFEE: get('coffee'),
    BEER: get('beer'),
