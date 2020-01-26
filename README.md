@@ -5,14 +5,11 @@
 <p align="center">
     <img src="docs/media/cover.png" alt="vespa" style="margin-bottom:20px;margin-top:20px;">
     </br>
-    <a href="">
-    <img alt="npm" src="https://img.shields.io/npm/dt/getvespa">
-    </a>
 	<a href="">
 	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/vespa">
 	</a>
     <a href="">
-    <img alt="GitHub" src="https://img.shields.io/github/license/getspooky/vespa">
+    <img alt="npm" src="https://img.shields.io/npm/l/getvespa">
     </a>
     <a href="https://spectrum.chat/vespa">
     <img alt="Chat with us on Spectrum" src="https://withspectrum.github.io/badge/badge.svg" />
@@ -27,7 +24,6 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation Steps](#Installation-Steps)
-- [How It Works](#how-it-works-mini-guides)
 - [Browser Support](#Browser-Support)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
@@ -52,6 +48,8 @@ Vespa has a few requirements you should be aware of before installing:
 - npm >= 6.10.3
 
 ## Installation Steps
+
+[![NPM](https://nodei.co/npm/getvespa.png)](https://nodei.co/npm/getvespa/)
 
 ### using GitHub:
 
