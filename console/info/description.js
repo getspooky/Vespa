@@ -9,4 +9,4 @@
 
 const {OPEN_HAND} = require('../ui/emojis');
 
-module.exports = `(c) Yasser Ameur El Idrissi <getspookydev@gmail.com> ${OPEN_HAND}`;
+module.exports = `(c) Yasser Ameur El Idrissi <getspookydev@gmail.com> ${OPEN_HAND} \n`;
