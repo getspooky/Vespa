@@ -29,10 +29,8 @@ Vespa is simply an admin for your app. Whatever you want your app to do on the b
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation Steps](#Installation-Steps)
-- [Quick Example](#getting-started)
 - [How It Works](#how-it-works-mini-guides)
 - [Browser Support](#Browser-Support)
-- [Production](#production)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
 - [License](#license)
@@ -100,9 +98,9 @@ SWAGGER_HOST=
 ```
 
 ### 3. Run The Installer
-Lastly, we can install voyager.
+Lastly, we can install vespa.
 <pre>
- npm run vespa:install
+ getvespa install demo
 </pre>
 
 And we're all good to go! 
@@ -120,13 +118,6 @@ Vespa supports reasonably recent versions of the following browsers:
 - Apple Safari
 - Microsoft Edge
 - Mozilla Firefox
-
-## How It Works (mini guides)
-
-This section is intended for giving you a detailed explanation of
-how a particular functionality works. Maybe you are just curious about
-how it works, or perhaps you are lost and confused while reading the code,
-I hope it provides some guidance to you.
 
 ## Security Vulnerabilities
 
