@@ -5,14 +5,11 @@
 <p align="center">
     <img src="docs/media/cover.png" alt="vespa" style="margin-bottom:20px;margin-top:20px;">
     </br>
-    <a href="">
-    <img alt="npm" src="https://img.shields.io/npm/dw/getvespa">
-    </a>
 	<a href="">
 	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/vespa">
 	</a>
     <a href="">
-    <img alt="GitHub" src="https://img.shields.io/github/license/getspooky/vespa">
+    <img alt="GitHub" src="image:https://img.shields.io/npm/l/getvespa[NPM]">
     </a>
     <a href="https://spectrum.chat/vespa">
     <img alt="Chat with us on Spectrum" src="https://withspectrum.github.io/badge/badge.svg" />
