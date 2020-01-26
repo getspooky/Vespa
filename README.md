@@ -9,7 +9,7 @@
 	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/vespa">
 	</a>
     <a href="">
-    <img alt="GitHub" src="image:https://img.shields.io/npm/l/getvespa[NPM]">
+    <img alt="npm" src="https://img.shields.io/npm/l/getvespa">
     </a>
     <a href="https://spectrum.chat/vespa">
     <img alt="Chat with us on Spectrum" src="https://withspectrum.github.io/badge/badge.svg" />
