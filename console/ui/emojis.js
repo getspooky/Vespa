@@ -7,9 +7,10 @@
  * file that was distributed with this source code.
  */
 
-const emoji = require('node-emoji');
+const {get} = require('node-emoji');
 
  module.exports = {
+   OPEN_HAND: get('open_hands'),  
    HEART: get('heart'),
    COFFEE: get('coffee'),
    BEER: get('beer'),
@@ -17,6 +18,5 @@ const emoji = require('node-emoji');
    CRYING: get('crying_cat_face'),
    HEART_EYES: get('heart_eyes_cat'),
    JOY: get('joy_cat'),
-   KISSING: get('kissing_cat'),
    SCREAM: get('scream_cat'),
  };
