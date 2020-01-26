@@ -1,11 +1,9 @@
 ## 🔥 Beautifully designed administration panel for (Nodejs, Laravel, Java Spring, Ruby On Rails , Django , Asp.net Core ...) 🛵🛵🛵
 
-Vespa is simply an admin for your app. Whatever you want your app to do on the back-end is completely up to you.
-
 🚦Vespa is not a CMS or a blogging platform but it can be used to create a CMS or a blogging platform, but out of the box it is neither of those. With Vespa you can create any kind of application your heart desires.
 
 <p align="center">
-    <img src="docs/media/cover.png" alt="vespa" style="margin-bottom:20px;">
+    <img src="docs/cover.png" alt="vespa" style="margin-bottom:20px;margin-top:20px;">
     </br>
     <a href="">
     <img alt="npm" src="https://img.shields.io/npm/dt/getvespa">
@@ -83,10 +81,8 @@ Installation is done using the [npm install command](https://docs.npmjs.com/down
  npm install -g getvespa
 ```
 
-### 2. Add the DB Credentials & APP_URL & Swagger host/port
-Next make sure to create a new database and add your database credentials to your .env file:
-
-```bash
+### 2. Add the APP_URL & Swagger host/port
+<pre>
 APP_NAME=
 APP_KEY=
 APP_ENV=env
