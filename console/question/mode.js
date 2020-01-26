@@ -12,7 +12,7 @@
     {
       type: 'checkbox',
       message: 'Select install mode',
-      name: 'toppings',
+      name: 'mode',
       choices: [
         {
           name: 'development'
