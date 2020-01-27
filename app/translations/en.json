@@ -62,11 +62,7 @@
   "SettingsPage.label.city": "City",
   "SettingsPage.label.postal_code": "Postal Code",
   "SettingsPage.label.country": "Country",
-<<<<<<< HEAD
-  "SettingsPage.label.about_me": "About Me"
-=======
   "SettingsPage.label.about_me": "About Me",
   "CreatePostPage.label.title": "Title",
   "CreatePostPage.label.content": "Content"
->>>>>>> dev
 }
