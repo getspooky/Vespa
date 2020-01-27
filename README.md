@@ -117,7 +117,7 @@ npm run build creates a build directory with a production build of your app. Set
 npm run build
 ```
 
-You don’t necessarily need a static server in order to run a Create React App project in production. It also works well when integrated into an existing server side app.
+You don’t necessarily need a static server in order to run a Vespa project in production. It also works well when integrated into an existing server side app.
 
 Here’s a programmatic example using Node and Express:
 
