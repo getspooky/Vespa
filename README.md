@@ -19,7 +19,7 @@
      </a>
 </p>
 <div align="center">
-  <sub>Created by and maintained with ❤️ by  <a href="https://github.com/getspooky">getspooky</a>.</sub>
+  <sub>Created and maintained with ❤️ by  <a href="https://github.com/getspooky">getspooky</a>.</sub>
 </div>
 
 ## Table of Contents
