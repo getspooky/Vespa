@@ -57,7 +57,7 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
-git clone https://github.com/getspooky/vespa.git myproject
+git clone https://github.com/getspooky/Vespa.git myproject
 
 # Change directory
 cd myproject
