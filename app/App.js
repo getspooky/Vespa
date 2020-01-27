@@ -9,6 +9,7 @@
 
 import React from 'react';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
+import PrivateRoute from 'app/guards'
 import VespaRoutes from './routes/web';
 import './App.scss';
 
@@ -16,8 +17,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        {VespaRoutes.map(({id,path,component}) => {
-          return (<Route key={id} exact path={path} component={component} />)
+      {VespaRoutes.map(({id,path,component,mode}) => {
+          if(mode === 'private')
+            return (<PrivateRoute key={id} exact path={path} component={component} />)  
+          else 
+            return (<Route key={id} exact path={path} component={component} />)            
         })}
       </Switch>
     </Router>
