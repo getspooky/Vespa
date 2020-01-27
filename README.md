@@ -27,6 +27,7 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation Steps](#Installation-Steps)
+- [Deployment](#Deployment)
 - [Browser Support](#Browser-Support)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
@@ -106,6 +107,30 @@ Start up a local development server with `npm run start`
 To see your application in action, open a browser window and navigate to http://localhost:8080. You should see the Vespa default information page:
 
 ![Welcome to our Vespa ❤](docs/media/Hello.png)
+
+## Deployment
+
+npm run build creates a build directory with a production build of your app. Set up your favorite HTTP server so that a visitor to your site is served index.html
+
+```bash
+# build for production environment
+npm run build
+```
+
+You don’t necessarily need a static server in order to run a Create React App project in production. It also works well when integrated into an existing server side app.
+
+Here’s a programmatic example using Node and Express:
+
+```js
+const express = require('express');
+const path = require('path');
+const app = express();
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.listen(9000);
+```
 
 ## Browser Support
 
