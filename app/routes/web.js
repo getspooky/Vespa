@@ -12,7 +12,7 @@ import LoginPage from '../containers/LoginPage';
 import RegisterPage from '../containers/RegisterPage';
 import ResetPasswordPage from '../containers/ResetPasswordPage';
 import ForgotPassword from '../containers/ForgotPasswordPage';
-import DashboardPage from '../containers/DashboardPage';
+//import DashboardPage from '../containers/DashboardPage';
 import UsersPage from '../containers/UsersPage';
 import PostsPage from '../containers/PostsPage';
 import SettingsPage from '../containers/SettingsPage';
@@ -32,7 +32,7 @@ export default [
   // Forgot Password
   { id:'#forgot', path: '/forgot/password/', component: ForgotPassword},
   // Dashboard Page
-  { id:'#dashboard', path:'/dashboard', mode:'private', component: DashboardPage },
+  //{ id:'#dashboard', path:'/dashboard', mode:'private', component: DashboardPage },
   // Users
   { id:'#users', path:'/users', mode:'private', component: UsersPage },
   // Posts
