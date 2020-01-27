@@ -1,0 +1,61 @@
+/*
+ * This file is part of the Vespa package.
+ *
+ * (c) Yasser Ameur El Idrissi <getspookydev@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.payment {
+  width: 2.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  background: no-repeat center/100% 100%;
+  vertical-align: bottom;
+  font-style: normal;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.payment-visa {
+  background-image: url("https://preview.tabler.io/assets/images/payments/visa.svg");
+}
+
+.progress {
+  height: .25rem !important;
+}
+
+.stamp-md {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+.stamp {
+  color: #fff;
+  background: #868e96;
+  display: inline-block;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 .25rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.bg-blue {
+  background-color: #467fcf !important;
+}
+
+.bg-green {
+  background-color: #5eba00 !important;
+}
+
+.bg-red {
+  background-color: #cd201f !important;
+}
+
+.bg-yellow {
+  background-color: #f1c40f !important;
+}
