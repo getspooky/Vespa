@@ -111,6 +111,7 @@ To see your application in action, open a browser window and navigate to http://
 
 Vespa supports reasonably recent versions of the following browsers:
 
+- IE 10+
 - Google Chrome
 - Apple Safari
 - Microsoft Edge
