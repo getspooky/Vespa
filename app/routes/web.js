@@ -32,7 +32,7 @@ export default [
   // Forgot Password
   { id:'#forgot', path: '/forgot/password/', component: ForgotPassword},
   // Dashboard Page
-  //{ id:'#dashboard', path:'/dashboard', mode:'private', component: DashboardPage },
+  { id:'#dashboard', path:'/dashboard', mode:'private', component: DashboardPage },
   // Users
   { id:'#users', path:'/users', mode:'private', component: UsersPage },
   // Posts
