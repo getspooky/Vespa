@@ -27,6 +27,7 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation Steps](#Installation-Steps)
+- [Swagger docs](#swagger)
 - [Deployment](#Deployment)
 - [Browser Support](#Browser-Support)
 - [Changelog](#changelog)
@@ -107,6 +108,16 @@ Start up a local development server with `npm run start`
 To see your application in action, open a browser window and navigate to http://localhost:8080. You should see the Vespa default information page:
 
 ![Welcome to our Vespa ❤](docs/media/Hello.png)
+
+## Swagger 
+
+Swagger is a simple yet powerful representation of your RESTful API. With the largest ecosystem of API tooling on the planet, thousands of developers are supporting Swagger in almost every modern programming language and deployment environment.
+
+```bash
+npm run api-docs
+```
+
+At this point if you start and open your browser at http://localhost:4200/api-docs you will see the Swagger UI web page with the documentation of your endpoint.
 
 ## Deployment
 
